@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "5b765c16-2431-4f5c-9794-4a5fefba2c5f",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "42982322"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"nabil@gmail.com\",\r\n    \"password\":\"Nabil2025@\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Task Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "JVv9nP3VqM07LPzVc2fZrqnFNO5W1CjsvjQAGaC96053a262"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"fixed Bug\",\r\n    \"description\":\"test\",\r\n    \"due_date\":\"2025-03-14\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "Show Tasks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "JVv9nP3VqM07LPzVc2fZrqnFNO5W1CjsvjQAGaC96053a262"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "JVv9nP3VqM07LPzVc2fZrqnFNO5W1CjsvjQAGaC96053a262"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/tasks/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "JVv9nP3VqM07LPzVc2fZrqnFNO5W1CjsvjQAGaC96053a262"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"fixed Bug\",\r\n    \"description\":\"test\",\r\n    \"due_date\":\"2025-03-14\",\r\n    \"status\":\"completed\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/tasks/1"
+			},
+			"response": []
+		}
+	]
+}
